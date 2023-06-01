@@ -1,29 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-// import openai from '../../utils/openai'
+import openai from '../../utils/openai'
 
-// type Data = {
-//   text: string;
-// };
+type Data = {
+  name: string;
+};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse<any>,
 ) {
-  res.status(200).json({ name: 'John Doe '})
+  const completion = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'user',
+        content: 'Hello?',
+      },
+    ],
+    max_tokens: 50,
+    temperature: 0.8,
+  });
+
+  const response = completion.data.choices[0].message.content;
+
+  res.status(200).json({ response });
 }
-
-//   const response = await openai.createCompletion({
-//     model: 'gpt-3.5-turbo',
-//     messages: [
-//       { role: "system", content: "You are a helpful assistant"},
-//       { role: "user", content: "Hello?"},
-//     ],
-//     max_tokens: 50,
-//     temperature: 0.8,
-//   });
-
-//   res.status(200).json(response.data.choices[0].message.content);
-// }
-
-// // api/chat shouldn't throw 404, but its throwing 404.
 
