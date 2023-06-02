@@ -9,20 +9,21 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>,
 ) {
-  const completion = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [
-      {
-        role: 'user',
-        content: 'Hello?',
-      },
-    ],
-    max_tokens: 50,
-    temperature: 0.8,
-  });
+  // const completion = await openai.createChatCompletion({
+  //   model: 'gpt-3.5-turbo',
+  //   messages: [
+  //     {
+  //       role: 'user',
+  //       content: 'Hello?',
+  //     },
+  //   ],
+  //   max_tokens: 50,
+  //   temperature: 0.8,
+  // });
 
-  const response = completion.data.choices[0].message.content;
+  // const response = completion.data.choices[0].message.content;
 
-  res.status(200).json({ response });
-}
+  // res.status(200).json({ response });
 
+  res.status(200).json({ pageName: "Home Page"});
+;}
