@@ -7,6 +7,14 @@ function Converter() {
   const [emoji, setEmoji] = useState("🥲");
 
   const captionToEmoji = (caption: string) => {
+    try {
+      const response = await fetch("api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
     // send api request with caption
     // get emoji result
     // update variable emoji
