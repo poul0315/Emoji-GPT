@@ -6,18 +6,33 @@ function Converter() {
   const [caption, setCaption] = useState("");
   const [emoji, setEmoji] = useState("🥲");
 
-  const captionToEmoji = (caption: string) => {
+  const captionToEmoji = async (caption: string) => {
     try {
       const response = await fetch("api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({ caption }),
       });
+
+      if (!response.ok) {
+        throw new Error("API request failed.");
+      }
+      const data = await response.json();
+      const emojiResult = data.response;
+
+      setEmoji(emojiResult);
+    } catch (error) {
+      console.error("Error converting caption to emoji: ", error);
     }
     // send api request with caption
     // get emoji result
     // update variable emoji
+  };
+
+  const handleConvertClick = () => {
+    captionToEmoji(caption);
   };
 
   return (
