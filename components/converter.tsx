@@ -15,7 +15,7 @@ function Converter() {
   return (
     <div className="max-w-xl w-full">
       <textarea
-        className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4 py-2"
+        className="w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4 py-2"
         rows={4}
         placeholder="Type your caption here"
         value={caption}
