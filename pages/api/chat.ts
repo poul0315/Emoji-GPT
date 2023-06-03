@@ -14,7 +14,7 @@ export default async function handler(
     messages: [
       {
         role: 'user',
-        content: 'Say hi back to me.',
+        content: `${req.body.prompt}`,
       },
     ],
     max_tokens: 50,

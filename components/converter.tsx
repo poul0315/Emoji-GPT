@@ -5,16 +5,17 @@ import EmojiBox from "./EmojiBox";
 
 function Converter() {
   const [caption, setCaption] = useState("");
-  const [emoji, setEmoji] = useState("💛");
+  const [emoji, setEmoji] = useState("");
 
   const captionToEmoji = async (caption: string) => {
+    const emojiPrompt = "I want you to translate the sentences I wrote into emojis. I will write the sentence, and you will express it with emojis. I just want you to express it with emojis. I don't want you to reply with anything but emoji. When I need to tell you something in English, I will do it by wrapping it in curly brackets like {like this}";
     try {
       const response = await fetch("api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ caption }),
+        body: JSON.stringify({ prompt : `${emojiPrompt}. {${caption}}` }),
       });
 
       if (!response.ok) {
@@ -47,7 +48,8 @@ function Converter() {
         value={caption}
         onChange={(e) => setCaption(e.target.value)}
       />
-      <button className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full">
+      <button className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+      onClick={() => captionToEmoji(caption)}>
         Convert to Emoji
       </button>
       {emoji && <EmojiBox emoji={emoji} />}
