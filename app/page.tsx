@@ -1,4 +1,4 @@
-import Converter from "../components/Converter";
+import Converter from "../components/converter";
 
 export default async function Home() {
   return (
