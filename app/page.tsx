@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Converter from "../components/Converter";
 
+
 export default async function Home() {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
