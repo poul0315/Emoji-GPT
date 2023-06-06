@@ -5,10 +5,10 @@ function Accordion() {
     <div className="max-w-xl w-full mt-36">
       <div className="flex justify-start flex-col divide-y ">
         <details>
-          <summary className="question py-3 px-4 cursor-pointer select-none outline-none">
+          <summary className="question py-3 px-4 cursor-pointer select-none outline-none text-left">
             About Us
           </summary>
-          <div className="flex flex-col space-y-6 max-w-xl w-full mt-5 text-left">
+          <div className="flex flex-col space-y-6 max-w-xl w-full mt-5 text-left px-4">
             <p>
               At Caption to Emoji, we believe that communication should be fun,
               expressive, and inclusive. Our application useState the power of
@@ -59,10 +59,10 @@ function Accordion() {
           </div>
         </details>
         <details>
-          <summary className="question py-3 px-4 cursor-pointer select-none ">
+          <summary className="question py-3 px-4 cursor-pointer select-none text-left ">
             How to Use Caption2Emoji?
           </summary>
-          <div className="flex flex-col space-y-6 max-w-xl w-full mt-5 text-left">
+          <div className="flex flex-col space-y-6 max-w-xl w-full mt-5 text-left px-4">
             <p>
               How does Caption to Emoji work? It&#39;s simple! You provide us
               with a caption or text input, and our intelligent AI engine
