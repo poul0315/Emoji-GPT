@@ -1,4 +1,4 @@
-import About from "../components/About";
+import Accordion from "../components/Accordion";
 import Converter from "../components/Converter";
 
 
@@ -9,7 +9,7 @@ export default async function Home() {
         Caption to Emoji
       </h1>
       <Converter />
-      <About />
+      <Accordion />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function About() {
+function Accordion() {
   return (
     <div className="max-w-xl w-full mt-36">
       <div className="flex justify-start flex-col divide-y ">
@@ -77,4 +77,4 @@ function About() {
   );
 }
 
-export default About;
+export default Accordion;
