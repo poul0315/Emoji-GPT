@@ -5,6 +5,23 @@ function Accordion() {
     <div className="max-w-xl w-full mt-36">
       <div className="flex justify-start flex-col divide-y ">
         <details>
+          <summary className="question py-3 px-4 cursor-pointer select-none text-left ">
+            How to Use Caption2Emoji?
+          </summary>
+          <div className="flex flex-col space-y-6 max-w-xl w-full text-left px-4">
+            <p>
+              How does Caption to Emoji work? It&#39;s simple! You provide us
+              with a caption or text input, and our intelligent AI engine
+              processes it using the state-of-the-art natural language
+              processing algorithms. Our system then leverages the capabilities
+              of the OpenAI API to analyze the context, sentiment, and emotions
+              within your text. Based on this analysis, we generate a set of
+              relevant and fitting emojis that capture the essence of your
+              words.
+            </p>
+          </div>
+        </details>
+        <details>
           <summary className="question py-3 px-4 cursor-pointer select-none outline-none text-left">
             About Us
           </summary>
@@ -56,23 +73,6 @@ function Accordion() {
               experience with Caption to Emoji the best it can be.
             </p>
             <p>The Caption to Emoji Team</p>
-          </div>
-        </details>
-        <details>
-          <summary className="question py-3 px-4 cursor-pointer select-none text-left ">
-            How to Use Caption2Emoji?
-          </summary>
-          <div className="flex flex-col space-y-6 max-w-xl w-full text-left px-4">
-            <p>
-              How does Caption to Emoji work? It&#39;s simple! You provide us
-              with a caption or text input, and our intelligent AI engine
-              processes it using the state-of-the-art natural language
-              processing algorithms. Our system then leverages the capabilities
-              of the OpenAI API to analyze the context, sentiment, and emotions
-              within your text. Based on this analysis, we generate a set of
-              relevant and fitting emojis that capture the essence of your
-              words.
-            </p>
           </div>
         </details>
       </div>
