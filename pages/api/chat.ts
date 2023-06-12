@@ -27,3 +27,5 @@ export default async function handler(
 
   // res.status(200).json({ pageName: "Home Page"});
 ;}
+
+// embed in apple keyboard (keyboard extension)
