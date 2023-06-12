@@ -3,12 +3,12 @@ import React from "react";
 function Accordion() {
   return (
     <div className="max-w-xl w-full mt-36">
-      <div className="flex justify-start flex-col divide-y ">
+      <div className="flex justify-start flex-col divide-y">
         <details>
           <summary className="question py-3 px-4 cursor-pointer select-none outline-none text-left">
             About Us
           </summary>
-          <div className="flex flex-col space-y-6 max-w-xl w-full text-left px-4">
+          <div className="flex flex-col space-y-6 max-w-xl w-full px-4">
             <p>
               At Caption to Emoji, we believe that communication should be fun,
               expressive, and inclusive. Our application useState the power of
@@ -59,7 +59,7 @@ function Accordion() {
           </div>
         </details>
         <details>
-          <summary className="question py-3 px-4 cursor-pointer select-none text-left ">
+          <summary className="question py-3 px-4 cursor-pointer select-none text-left">
             How to Use Caption2Emoji?
           </summary>
           <div className="flex flex-col space-y-6 max-w-xl w-full text-left px-4">
